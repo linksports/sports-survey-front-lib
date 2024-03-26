@@ -1,0 +1,45 @@
+.sd-question__required-text {
+  color: #008A1C;
+}
+.sd-panel__required-text {
+  color: #008A1C;
+}
+
+.sd-root-modern--full-container .sd-selectbase[role="radiogroup"],
+.sd-root-modern--full-container .sd-selectbase[role="listbox"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sd-root-modern--full-container .sd-custom-choices-column-1-col .sd-selectbase__item {
+  width: 100%;
+}
+.sd-root-modern--full-container .sd-custom-choices-column-2-cols .sd-selectbase__item {
+  width: 50%;
+}
+
+/*
+.sd-root-modern--full-container .sd-selectbase[role="radiogroup"] .sd-selectbase__item,
+.sd-root-modern--full-container .sd-selectbase[role="listbox"] .sd-selectbase__item {
+  width: 50%;
+}
+*/
+
+.sd-root-modern--full-container .sd-description .sv-string-viewer.sv-string-viewer--multiline {
+  white-space: normal;
+}
+.sd-root-modern--full-container .sd-description ul,
+.sd-root-modern--full-container .sd-description ol,
+.sd-root-modern--full-container .sd-description p {
+  margin-top: 0.5rem;
+}
+.sd-root-modern--full-container .sd-description h3,
+.sd-root-modern--full-container .sd-description h4 {
+  margin-bottom: 0.5rem;
+}
+
+.sd-root-modern--full-container .sd-custom-survey-info {
+  background-color: rgba(243, 243, 243, 1);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
