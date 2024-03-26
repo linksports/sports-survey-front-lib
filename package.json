@@ -3,5 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://bitbucket.org/linksportsinc/sports-survey-front-lib",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "copy-files": "^0.1.0",
+    "showdown": "^2.1.0",
+    "survey-core": "^1.9.132",
+    "survey-react-ui": "^1.9.132",
+    "tsc-hooks": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
+  }
 }
