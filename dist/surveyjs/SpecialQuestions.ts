@@ -1,4 +1,5 @@
 import { ComponentCollection } from 'survey-core';
+export { ComponentCollection } from 'survey-core';
 
 export function SpecializeQuestions(cc: ComponentCollection) {
   if (
