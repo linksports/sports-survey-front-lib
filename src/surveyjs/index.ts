@@ -9,6 +9,7 @@ export { SpecializeQuestions } from './SpecialQuestions';
 export { GetSportsSurveyLocales } from './i18n';
 export { ConvertHtml, handleRichDescription } from './RichDescription';
 export { AddChoicesMultiColumns, handleChoicesMultiColumns } from './ChoicesMultiColumns';
+export { InsertSurveyInfo } from './SurveyInfo';
 
 export function GetSportsSurveyThemeJson(): ITheme {
   return themeJson as ITheme;

@@ -36,3 +36,10 @@
 .sd-root-modern--full-container .sd-description h4 {
   margin-bottom: 0.5rem;
 }
+
+.sd-root-modern--full-container .sd-custom-survey-info {
+  background-color: rgba(243, 243, 243, 1);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
