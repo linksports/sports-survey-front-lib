@@ -18,6 +18,10 @@
     "@types/node": "^20.11.30",
     "typescript": "^5.4.3"
   },
+  "resolutions": {
+    "survey-core": "1.9.135",
+    "survey-react-ui": "1.9.135"
+  },
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "yarn build"
