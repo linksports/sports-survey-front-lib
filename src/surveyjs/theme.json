@@ -89,6 +89,6 @@
         "--sjs-article-font-default-lineHeight": "28px",
         "--sjs-article-font-default-paragraphIndent": "0px",
         "--sjs-article-font-default-textCase": "none",
-        "--sjs-default-font-family": "\"ヒラギノ角ゴ\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", \"Meiryo\", sans-serif"
+        "--sjs-font-family": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif;"
     }
 }

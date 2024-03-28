@@ -1,8 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SpecializeQuestions = exports.ComponentCollection = void 0;
-var survey_core_1 = require("survey-core");
-Object.defineProperty(exports, "ComponentCollection", { enumerable: true, get: function () { return survey_core_1.ComponentCollection; } });
+exports.SpecializeQuestions = void 0;
 function SpecializeQuestions(cc) {
     if (!cc.getCustomQuestionByName('__spprop__gender')) {
         cc.add({
