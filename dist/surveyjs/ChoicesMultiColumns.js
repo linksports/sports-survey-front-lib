@@ -21,7 +21,7 @@ exports.AddChoicesMultiColumns = AddChoicesMultiColumns;
 function handleChoicesMultiColumns(sender, options) {
     const cc = options.question.getPropertyValue('choicesColumns');
     if (cc) {
-        const field = options.htmlElement.getElementsByClassName('sd-selectbase')[0];
+        const field = options.htmlElement;
         field.classList.remove("sd-custom-choices-column-1-col");
         field.classList.remove("sd-custom-choices-column-2-cols");
         field.classList.remove("sd-custom-choices-column-resp-2-cols");
