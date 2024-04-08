@@ -13,7 +13,7 @@
         "--sjs-general-backcolor-dim-light": "rgba(255, 255, 255, 1)",
         "--sjs-general-backcolor-dim-dark": "rgba(243, 243, 243, 1)",
         "--sjs-general-forecolor": "rgba(0, 0, 0, 0.91)",
-        "--sjs-general-forecolor-light": "rgba(0, 0, 0, 0.45)",
+        "--sjs-general-forecolor-light": "rgba(0, 0, 0, 0.85)",
         "--sjs-general-dim-forecolor": "rgba(0, 0, 0, 0.91)",
         "--sjs-general-dim-forecolor-light": "rgba(0, 0, 0, 0.45)",
         "--sjs-primary-backcolor": "#008A1C",
