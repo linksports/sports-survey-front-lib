@@ -22,7 +22,8 @@ function handleChoicesMultiColumns(sender, options) {
     const cc = options.question.getPropertyValue('choicesColumns');
     if (cc) {
         const fields = options.htmlElement.getElementsByClassName('sd-question__content');
-        for (const field of fields) {
+        if (fields) {
+            const field = fields[0];
             field.classList.remove("sd-custom-choices-column-1-col");
             field.classList.remove("sd-custom-choices-column-2-cols");
             field.classList.remove("sd-custom-choices-column-resp-2-cols");
