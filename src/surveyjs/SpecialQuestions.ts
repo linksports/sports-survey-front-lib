@@ -1,6 +1,10 @@
-import { ComponentCollection } from 'survey-core';
+// import { ComponentCollection } from 'survey-core';
+interface SurveyComponentCollection {
+	getCustomQuestionByName(name: string): boolean;
+	add(config: any): any;
+}
 
-export function SpecializeQuestions(cc: ComponentCollection) {
+export function SpecializeQuestions(cc: SurveyComponentCollection) {
 	if (
 		!cc.getCustomQuestionByName('__spprop__gender')
 	) {
