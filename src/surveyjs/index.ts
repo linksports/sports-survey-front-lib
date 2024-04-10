@@ -12,6 +12,6 @@ export { AddChoicesMultiColumns, handleChoicesMultiColumns } from './ChoicesMult
 export { InsertSurveyInfo } from './SurveyInfo';
 
 export function GetSportsSurveyThemeJson(): ITheme {
-  return themeJson as ITheme;
+	return themeJson as ITheme;
 };
 

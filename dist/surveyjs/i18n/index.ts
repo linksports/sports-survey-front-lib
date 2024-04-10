@@ -4,7 +4,7 @@ import { surveyLocalization } from 'survey-core';
 import { overrideJapanese } from './Japanese';
 
 export function GetSportsSurveyLocales(): { [index: string]: any } {
-  const locales = surveyLocalization.locales;
-  overrideJapanese(locales);
-  return locales;
+	const locales = surveyLocalization.locales;
+	overrideJapanese(locales);
+	return locales;
 }
