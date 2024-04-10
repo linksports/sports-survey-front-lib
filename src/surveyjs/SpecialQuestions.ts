@@ -1,8 +1,6 @@
-// import { ComponentCollection } from 'survey-core';
-interface SurveyComponentCollection {
-	getCustomQuestionByName(name: string): boolean;
-	add(config: any): any;
-}
+import { ComponentCollection } from 'survey-core';
+
+type SurveyComponentCollection = Pick<ComponentCollection, 'getCustomQuestionByName' | 'add'>;
 
 export function SpecializeQuestions(cc: SurveyComponentCollection) {
 	if (
