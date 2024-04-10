@@ -10,8 +10,8 @@
   "dependencies": {
     "copy-files": "^0.1.0",
     "showdown": "^2.1.0",
-    "survey-core": "^1.9.135",
-    "survey-react-ui": "^1.9.135",
+    "survey-core": "1.9.135",
+    "survey-react-ui": "1.9.135",
     "tsc-hooks": "^1.1.2"
   },
   "devDependencies": {
