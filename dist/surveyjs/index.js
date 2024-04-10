@@ -3,13 +3,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetSportsSurveyThemeJson = exports.InsertSurveyInfo = exports.handleChoicesMultiColumns = exports.AddChoicesMultiColumns = exports.handleRichDescription = exports.ConvertHtml = exports.GetSportsSurveyLocales = exports.SpecializeQuestions = void 0;
+exports.GetSportsSurveyThemeJson = exports.InsertSurveyInfo = exports.handleChoicesMultiColumns = exports.AddChoicesMultiColumns = exports.handleRichDescription = exports.ConvertHtml = exports.GetSportsSurveyLocales = exports.SpecialQuestions = exports.SpecializeQuestions = void 0;
 const theme_json_1 = __importDefault(require("./theme.json"));
 require("survey-core/defaultV2.min.css");
 require("survey-core/survey.i18n");
 require("./theme.css");
 var SpecialQuestions_1 = require("./SpecialQuestions");
 Object.defineProperty(exports, "SpecializeQuestions", { enumerable: true, get: function () { return SpecialQuestions_1.SpecializeQuestions; } });
+Object.defineProperty(exports, "SpecialQuestions", { enumerable: true, get: function () { return SpecialQuestions_1.SpecialQuestions; } });
 var i18n_1 = require("./i18n");
 Object.defineProperty(exports, "GetSportsSurveyLocales", { enumerable: true, get: function () { return i18n_1.GetSportsSurveyLocales; } });
 var RichDescription_1 = require("./RichDescription");

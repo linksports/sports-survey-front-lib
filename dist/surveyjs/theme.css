@@ -24,6 +24,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+.sd-root-modern .sd-selectbase__item,
 .sd-root-modern .sd-custom-choices-column-1-col .sd-selectbase__item {
   width: 100%;
 }
