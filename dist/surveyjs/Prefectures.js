@@ -45,7 +45,7 @@ exports.Prefectures = [
     { value: 41, text: { ja: "佐賀県", en: "Saga" } },
     { value: 42, text: { ja: "長崎県", en: "Nagasaki" } },
     { value: 43, text: { ja: "熊本県", en: "Kumamoto" } },
-    { value: 44, text: { ja: "大分県", en: "Ohita" } },
+    { value: 44, text: { ja: "大分県", en: "Oita" } },
     { value: 45, text: { ja: "宮崎県", en: "Miyazaki" } },
     { value: 46, text: { ja: "鹿児島県", en: "Kagoshima" } },
     { value: 47, text: { ja: "沖縄県", en: "Okinawa" } },

@@ -8,15 +8,17 @@
     "dist"
   ],
   "dependencies": {
-    "copy-files": "^0.1.0",
     "showdown": "^2.1.0",
-    "tsc-hooks": "^1.1.2"
+    "survey-core": "^1.10.2",
+    "typed-rest-client": "^1.8.11"
   },
   "peerDependencies": {
-    "survey-core": "1.9.136"
+    "survey-core": "^1.10.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "copy-files": "^0.1.0",
+    "tsc-hooks": "^1.1.2",
     "typescript": "^5.4.3"
   },
   "scripts": {

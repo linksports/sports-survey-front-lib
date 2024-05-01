@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpecialQuestions = exports.SpecializeQuestions = void 0;
 const Prefectures_1 = require("./Prefectures");
+const GetJpAddressByZip_1 = require("./GetJpAddressByZip");
 function SpecializeQuestions(cc) {
     for (const sq of exports.SpecialQuestions) {
         if (!cc.getCustomQuestionByName(sq.name)) {
@@ -111,5 +112,12 @@ exports.SpecialQuestions = [
                 isRequired: false,
             },
         ],
+        onValueChanged(question, name, newValue) {
+            const zip = newValue.zip;
+            if (zip.length == 7) {
+                (0, GetJpAddressByZip_1.GetJpAddressByZip)(zip);
+            }
+            ;
+        },
     },
 ];

@@ -1,4 +1,4 @@
-import { ComponentCollection } from 'survey-core';
+import { ComponentCollection, Question } from 'survey-core';
 export declare function SpecializeQuestions(cc: ComponentCollection): void;
 export declare const SpecialQuestions: ({
     name: string;
@@ -19,6 +19,7 @@ export declare const SpecialQuestions: ({
         inputType?: undefined;
     };
     elementsJSON?: undefined;
+    onValueChanged?: undefined;
 } | {
     name: string;
     title: string;
@@ -32,6 +33,7 @@ export declare const SpecialQuestions: ({
         choices?: undefined;
     };
     elementsJSON?: undefined;
+    onValueChanged?: undefined;
 } | {
     name: string;
     title: string;
@@ -88,6 +90,7 @@ export declare const SpecialQuestions: ({
         choices?: undefined;
         startWithNewLine?: undefined;
     })[];
+    onValueChanged(question: Question, name: string, newValue: any): void;
     questionJSON?: undefined;
 })[];
 //# sourceMappingURL=SpecialQuestions.d.ts.map

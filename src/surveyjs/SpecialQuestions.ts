@@ -1,5 +1,6 @@
-import { ComponentCollection } from 'survey-core';
+import { ComponentCollection, Question } from 'survey-core';
 import { Prefectures } from './Prefectures';
+import { GetJpAddressByZip } from './GetJpAddressByZip';
 
 export function SpecializeQuestions(cc: ComponentCollection) {
 	for (const sq of SpecialQuestions) {
@@ -107,5 +108,11 @@ export const SpecialQuestions = [
 				isRequired: false,
 			},
 		],
+		onValueChanged(question: Question, name: string, newValue: any){
+			const zip = newValue.zip;
+			if (zip.length == 7) {
+				GetJpAddressByZip(zip);
+			};
+		},
 	},
 ];
