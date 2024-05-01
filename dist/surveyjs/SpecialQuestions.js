@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpecialQuestions = exports.SpecializeQuestions = void 0;
+const Prefectures_1 = require("./Prefectures");
 function SpecializeQuestions(cc) {
     for (const sq of exports.SpecialQuestions) {
         if (!cc.getCustomQuestionByName(sq.name)) {
@@ -65,15 +66,24 @@ exports.SpecialQuestions = [
                 name: 'zip',
                 title: 'Zip Code',
                 titleLocation: 'hidden',
+                placeholder: {
+                    ja: '郵便番号',
+                    en: 'Zip Code',
+                },
                 commentPlaceholder: 'Zip code',
                 isRequired: true,
                 maxWidth: '40%',
             },
             {
-                type: 'text',
+                type: 'dropdown',
                 name: 'prefecture',
+                choices: Prefectures_1.Prefectures,
                 title: 'Prefecture',
                 titleLocation: 'hidden',
+                placeholder: {
+                    ja: '都道府県',
+                    en: 'Prefecture',
+                },
                 startWithNewLine: false,
                 isRequired: true,
                 maxWidth: '60%',
@@ -83,6 +93,10 @@ exports.SpecialQuestions = [
                 name: 'address',
                 title: 'Address',
                 titleLocation: 'hidden',
+                placeholder: {
+                    ja: '住所1',
+                    en: 'Address 1',
+                },
                 isRequired: true,
             },
             {
@@ -90,6 +104,10 @@ exports.SpecialQuestions = [
                 name: 'address2',
                 title: 'Address 2',
                 titleLocation: 'hidden',
+                placeholder: {
+                    ja: '住所2',
+                    en: 'Address 2',
+                },
                 isRequired: false,
             },
         ],

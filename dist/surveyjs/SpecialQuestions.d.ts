@@ -44,15 +44,31 @@ export declare const SpecialQuestions: ({
         name: string;
         title: string;
         titleLocation: string;
+        placeholder: {
+            ja: string;
+            en: string;
+        };
         commentPlaceholder: string;
         isRequired: boolean;
         maxWidth: string;
+        choices?: undefined;
         startWithNewLine?: undefined;
     } | {
         type: string;
         name: string;
+        choices: {
+            value: number;
+            text: {
+                ja: string;
+                en: string;
+            };
+        }[];
         title: string;
         titleLocation: string;
+        placeholder: {
+            ja: string;
+            en: string;
+        };
         startWithNewLine: boolean;
         isRequired: boolean;
         maxWidth: string;
@@ -62,9 +78,14 @@ export declare const SpecialQuestions: ({
         name: string;
         title: string;
         titleLocation: string;
+        placeholder: {
+            ja: string;
+            en: string;
+        };
         isRequired: boolean;
         commentPlaceholder?: undefined;
         maxWidth?: undefined;
+        choices?: undefined;
         startWithNewLine?: undefined;
     })[];
     questionJSON?: undefined;

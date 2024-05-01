@@ -1,4 +1,5 @@
 import { ComponentCollection } from 'survey-core';
+import { Prefectures } from './Prefectures';
 
 export function SpecializeQuestions(cc: ComponentCollection) {
 	for (const sq of SpecialQuestions) {
@@ -61,15 +62,24 @@ export const SpecialQuestions = [
 				name: 'zip',
 				title: 'Zip Code',
 				titleLocation: 'hidden',
+				placeholder: {
+					ja: '郵便番号',
+					en: 'Zip Code',
+				},
 				commentPlaceholder: 'Zip code',
 				isRequired: true,
 				maxWidth: '40%',
 			},
 			{
-				type: 'text',
+				type: 'dropdown',
 				name: 'prefecture',
+				choices: Prefectures,
 				title: 'Prefecture',
 				titleLocation: 'hidden',
+				placeholder: {
+					ja: '都道府県',
+					en: 'Prefecture',
+				},
 				startWithNewLine: false,
 				isRequired: true,
 				maxWidth: '60%',
@@ -79,6 +89,10 @@ export const SpecialQuestions = [
 				name: 'address',
 				title: 'Address',
 				titleLocation: 'hidden',
+				placeholder: {
+					ja: '住所1',
+					en: 'Address 1',
+				},
 				isRequired: true,
 			},
 			{
@@ -86,6 +100,10 @@ export const SpecialQuestions = [
 				name: 'address2',
 				title: 'Address 2',
 				titleLocation: 'hidden',
+				placeholder: {
+					ja: '住所2',
+					en: 'Address 2',
+				},
 				isRequired: false,
 			},
 		],
