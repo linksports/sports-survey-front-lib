@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SpecialQuestions = exports.SpecializeQuestions = void 0;
+exports.SpecialQuestions = exports.validateAddress = exports.SpecializeQuestions = void 0;
 const Prefectures_1 = require("./Prefectures");
-const GetJpAddressByZip_1 = require("./GetJpAddressByZip");
 function SpecializeQuestions(cc) {
     for (const sq of exports.SpecialQuestions) {
         if (!cc.getCustomQuestionByName(sq.name)) {
@@ -14,6 +13,11 @@ function SpecializeQuestions(cc) {
 }
 exports.SpecializeQuestions = SpecializeQuestions;
 ;
+function validateAddress(params) {
+    console.log("validate!!!!!", params);
+    return false;
+}
+exports.validateAddress = validateAddress;
 exports.SpecialQuestions = [
     {
         name: '__spprop__gender',
@@ -72,8 +76,22 @@ exports.SpecialQuestions = [
                     en: 'Zip Code',
                 },
                 commentPlaceholder: 'Zip code',
-                isRequired: true,
                 maxWidth: '40%',
+                validators: [{
+                        type: 'regex',
+                        regex: '[0-9]{7}',
+                        text: {
+                            ja: '郵便番号は数字7桁で入力してください',
+                            en: 'Zip code has to be 7 digits numbers in Japan',
+                        },
+                    }, {
+                        type: 'expression',
+                        expression: '{composite.zip} notempty or ({composite.zip} empty and {composite.prefecture} empty and {composite.address} empty)',
+                        text: {
+                            ja: '郵便番号を入力してください',
+                            en: 'Please enter your zip code',
+                        },
+                    }],
             },
             {
                 type: 'dropdown',
@@ -86,7 +104,14 @@ exports.SpecialQuestions = [
                     en: 'Prefecture',
                 },
                 startWithNewLine: false,
-                isRequired: true,
+                validators: [{
+                        type: 'expression',
+                        expression: '{composite.prefecture} notempty or ({composite.zip} empty and {composite.prefecture} empty and {composite.address} empty)',
+                        text: {
+                            ja: '都道府県を選択してください',
+                            en: 'Please select your prefecture',
+                        },
+                    }],
                 maxWidth: '60%',
             },
             {
@@ -98,7 +123,15 @@ exports.SpecialQuestions = [
                     ja: '住所1',
                     en: 'Address 1',
                 },
-                isRequired: true,
+                validators: [{
+                        type: 'expression',
+                        expression: '{composite.address} notempty or ({composite.zip} empty and {composite.prefecture} empty and {composite.address} empty)',
+                        text: {
+                            ja: '住所を入力してください',
+                            en: 'Please enter your address',
+                        },
+                    }],
+                // isRequired: true,
             },
             {
                 type: 'text',
@@ -112,12 +145,5 @@ exports.SpecialQuestions = [
                 isRequired: false,
             },
         ],
-        onValueChanged(question, name, newValue) {
-            const zip = newValue.zip;
-            if (zip.length == 7) {
-                (0, GetJpAddressByZip_1.GetJpAddressByZip)(zip);
-            }
-            ;
-        },
     },
 ];

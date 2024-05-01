@@ -1,6 +1,5 @@
 import { ComponentCollection, Question } from 'survey-core';
 import { Prefectures } from './Prefectures';
-import { GetJpAddressByZip } from './GetJpAddressByZip';
 
 export function SpecializeQuestions(cc: ComponentCollection) {
 	for (const sq of SpecialQuestions) {
@@ -9,6 +8,11 @@ export function SpecializeQuestions(cc: ComponentCollection) {
 		};
 	};
 };
+
+export function validateAddress(params: any) {
+	console.log("validate!!!!!", params);
+	return false;
+}
 
 export const SpecialQuestions = [
 	{
@@ -68,8 +72,22 @@ export const SpecialQuestions = [
 					en: 'Zip Code',
 				},
 				commentPlaceholder: 'Zip code',
-				isRequired: true,
 				maxWidth: '40%',
+				validators: [{
+					type: 'regex',
+					regex: '[0-9]{7}',
+					text: {
+						ja: '郵便番号は数字7桁で入力してください',
+						en: 'Zip code has to be 7 digits numbers in Japan',
+					},
+				}, {
+					type: 'expression',
+					expression: '{composite.zip} notempty or ({composite.zip} empty and {composite.prefecture} empty and {composite.address} empty)',
+					text: {
+						ja: '郵便番号を入力してください',
+						en: 'Please enter your zip code',
+					},
+				}],
 			},
 			{
 				type: 'dropdown',
@@ -82,7 +100,14 @@ export const SpecialQuestions = [
 					en: 'Prefecture',
 				},
 				startWithNewLine: false,
-				isRequired: true,
+				validators: [{
+					type: 'expression',
+					expression: '{composite.prefecture} notempty or ({composite.zip} empty and {composite.prefecture} empty and {composite.address} empty)',
+					text: {
+						ja: '都道府県を選択してください',
+						en: 'Please select your prefecture',
+					},
+				}],
 				maxWidth: '60%',
 			},
 			{
@@ -94,7 +119,15 @@ export const SpecialQuestions = [
 					ja: '住所1',
 					en: 'Address 1',
 				},
-				isRequired: true,
+				validators: [{
+					type: 'expression',
+					expression: '{composite.address} notempty or ({composite.zip} empty and {composite.prefecture} empty and {composite.address} empty)',
+					text: {
+						ja: '住所を入力してください',
+						en: 'Please enter your address',
+					},
+				}],
+				// isRequired: true,
 			},
 			{
 				type: 'text',
@@ -108,11 +141,5 @@ export const SpecialQuestions = [
 				isRequired: false,
 			},
 		],
-		onValueChanged(question: Question, name: string, newValue: any){
-			const zip = newValue.zip;
-			if (zip.length == 7) {
-				GetJpAddressByZip(zip);
-			};
-		},
 	},
 ];

@@ -1,5 +1,6 @@
-import { ComponentCollection, Question } from 'survey-core';
+import { ComponentCollection } from 'survey-core';
 export declare function SpecializeQuestions(cc: ComponentCollection): void;
+export declare function validateAddress(params: any): boolean;
 export declare const SpecialQuestions: ({
     name: string;
     title: string;
@@ -19,7 +20,6 @@ export declare const SpecialQuestions: ({
         inputType?: undefined;
     };
     elementsJSON?: undefined;
-    onValueChanged?: undefined;
 } | {
     name: string;
     title: string;
@@ -33,7 +33,6 @@ export declare const SpecialQuestions: ({
         choices?: undefined;
     };
     elementsJSON?: undefined;
-    onValueChanged?: undefined;
 } | {
     name: string;
     title: string;
@@ -51,10 +50,27 @@ export declare const SpecialQuestions: ({
             en: string;
         };
         commentPlaceholder: string;
-        isRequired: boolean;
         maxWidth: string;
+        validators: ({
+            type: string;
+            regex: string;
+            text: {
+                ja: string;
+                en: string;
+            };
+            expression?: undefined;
+        } | {
+            type: string;
+            expression: string;
+            text: {
+                ja: string;
+                en: string;
+            };
+            regex?: undefined;
+        })[];
         choices?: undefined;
         startWithNewLine?: undefined;
+        isRequired?: undefined;
     } | {
         type: string;
         name: string;
@@ -72,9 +88,39 @@ export declare const SpecialQuestions: ({
             en: string;
         };
         startWithNewLine: boolean;
-        isRequired: boolean;
+        validators: {
+            type: string;
+            expression: string;
+            text: {
+                ja: string;
+                en: string;
+            };
+        }[];
         maxWidth: string;
         commentPlaceholder?: undefined;
+        isRequired?: undefined;
+    } | {
+        type: string;
+        name: string;
+        title: string;
+        titleLocation: string;
+        placeholder: {
+            ja: string;
+            en: string;
+        };
+        validators: {
+            type: string;
+            expression: string;
+            text: {
+                ja: string;
+                en: string;
+            };
+        }[];
+        commentPlaceholder?: undefined;
+        maxWidth?: undefined;
+        choices?: undefined;
+        startWithNewLine?: undefined;
+        isRequired?: undefined;
     } | {
         type: string;
         name: string;
@@ -87,10 +133,10 @@ export declare const SpecialQuestions: ({
         isRequired: boolean;
         commentPlaceholder?: undefined;
         maxWidth?: undefined;
+        validators?: undefined;
         choices?: undefined;
         startWithNewLine?: undefined;
     })[];
-    onValueChanged(question: Question, name: string, newValue: any): void;
     questionJSON?: undefined;
 })[];
 //# sourceMappingURL=SpecialQuestions.d.ts.map

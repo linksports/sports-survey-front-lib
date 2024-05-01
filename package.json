@@ -1,6 +1,6 @@
 {
   "name": "sports-survey-front-lib",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "repository": "https://bitbucket.org/linksportsinc/sports-survey-front-lib",
   "license": "MIT",
@@ -9,8 +9,7 @@
   ],
   "dependencies": {
     "showdown": "^2.1.0",
-    "survey-core": "^1.10.2",
-    "typed-rest-client": "^1.8.11"
+    "survey-core": "^1.10.2"
   },
   "peerDependencies": {
     "survey-core": "^1.10.2"
