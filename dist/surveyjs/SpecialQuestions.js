@@ -20,6 +20,17 @@ function validateAddress(params) {
 exports.validateAddress = validateAddress;
 exports.SpecialQuestions = [
     {
+        name: '__spprop__name',
+        title: 'お名前',
+        defaultQuestionTitle: {
+            en: 'Your name',
+            ja: 'お名前',
+        },
+        questionJSON: {
+            type: 'text',
+        },
+    },
+    {
         name: '__spprop__gender',
         title: '性別',
         defaultQuestionTitle: {
@@ -145,5 +156,27 @@ exports.SpecialQuestions = [
                 isRequired: false,
             },
         ],
+    },
+    {
+        name: '__spprop__tel',
+        title: '電話番号',
+        defaultQuestionTitle: {
+            en: 'Your phone number',
+            ja: '電話番号',
+        },
+        questionJSON: {
+            type: 'text',
+        },
+    },
+    {
+        name: '__spprop__fax',
+        title: 'FAX番号',
+        defaultQuestionTitle: {
+            en: 'Your fax number',
+            ja: 'FAX番号',
+        },
+        questionJSON: {
+            type: 'text',
+        },
     },
 ];
