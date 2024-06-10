@@ -10,6 +10,19 @@ export declare const SpecialQuestions: ({
     };
     questionJSON: {
         type: string;
+        choices?: undefined;
+        inputType?: undefined;
+    };
+    elementsJSON?: undefined;
+} | {
+    name: string;
+    title: string;
+    defaultQuestionTitle: {
+        en: string;
+        ja: string;
+    };
+    questionJSON: {
+        type: string;
         choices: {
             value: string;
             text: {
