@@ -18,7 +18,7 @@
   margin-left: .5rem;
 }
 
-
+/*
 .sd-root-modern:not(.svc-tab-designer) .sd-selectbase[role="radiogroup"],
 .sd-root-modern:not(.svc-tab-designer) .sd-selectbase[role="listbox"] {
   display: flex;
@@ -37,7 +37,7 @@
 .sd-root-modern--mobile:not(.svc-tab-designer) .sd-custom-choices-column-resp-2-cols .sd-selectbase__item {
   width: 100%;
 }
-
+*/
 
 .sd-root-modern--full-container .sd-description .sv-string-viewer.sv-string-viewer--multiline {
   white-space: normal;
