@@ -3,9 +3,9 @@
 
 
 "@types/node@^20.11.30":
-  version "20.11.30"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.30.tgz#9c33467fc23167a347e73834f788f4b9f399d66f"
-  integrity sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==
+  version "20.14.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.4.tgz#3426db474378502882036d595ec9e79a9b17d1e6"
+  integrity sha512-1ChboN+57suCT2t/f8lwtPY/k3qTpuD/qnqQuYoBg6OQOcPyaw7PiZVdGpaZYAvhDDtqrt0oAaM8+oSu1xsUGw==
   dependencies:
     undici-types "~5.26.4"
 
@@ -57,10 +57,10 @@ showdown@^2.1.0:
   dependencies:
     commander "^9.0.0"
 
-survey-core@^1.10.2:
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/survey-core/-/survey-core-1.10.2.tgz#3f6d8341a18586587e0ce8d5d9695b2f8d9de3a1"
-  integrity sha512-EszikpODkThTHQwvUABJfreiI+I8koE1gHAV5hDsXuLGQ+Iw7lewIUI16+sjoqxjKhq2M5TnaGe3DfOI/kDSSg==
+survey-core@^1.10.7:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/survey-core/-/survey-core-1.11.2.tgz#911f521af937c4b155590470c614d6622128ef34"
+  integrity sha512-HfqVu74JgvnG6lN5MiYSlmuew8mkpWbLgHsf0GcrVwNy+00MJlcmm3rC0oQcalzUn1TAXRh8LzdxyrgT+3WXig==
 
 tsc-hooks@^1.1.2:
   version "1.1.2"
@@ -70,9 +70,9 @@ tsc-hooks@^1.1.2:
     json5 "^2.2.0"
 
 typescript@^5.4.3:
-  version "5.4.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.3.tgz#5c6fedd4c87bee01cd7a528a30145521f8e0feff"
-  integrity sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==
+  version "5.4.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.5.tgz#42ccef2c571fdbd0f6718b1d1f5e6e5ef006f611"
+  integrity sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==
 
 undici-types@~5.26.4:
   version "5.26.5"
