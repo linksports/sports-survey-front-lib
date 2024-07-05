@@ -38,6 +38,13 @@ export function SpecializeQuestions(cc: ComponentCollection, serializer: typeof 
 							ja: '女性',
 						},
 					},
+					{
+						value: 'no_answer',
+						text: {
+							en: 'No answer',
+							ja: '無回答',
+						},
+					},
 				],
 			},
 		},
