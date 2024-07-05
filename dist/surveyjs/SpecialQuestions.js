@@ -39,6 +39,13 @@ function SpecializeQuestions(cc, serializer) {
                             ja: '女性',
                         },
                     },
+                    {
+                        value: 'no_answer',
+                        text: {
+                            en: 'No answer',
+                            ja: '無回答',
+                        },
+                    },
                 ],
             },
         },
