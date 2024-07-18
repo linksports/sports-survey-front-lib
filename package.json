@@ -1,6 +1,6 @@
 {
   "name": "sports-survey-front-lib",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "index.js",
   "repository": "https://bitbucket.org/linksportsinc/sports-survey-front-lib",
   "license": "MIT",
