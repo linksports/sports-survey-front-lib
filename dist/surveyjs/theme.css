@@ -59,6 +59,10 @@
   font-size: 0.8rem;
 }
 
+[data-name=agree-to-tos] .sd-element__content {
+  padding-top: 0;
+}
+
 .tos-container {
   border: 1px solid #ccc;
   height: 10rem;
