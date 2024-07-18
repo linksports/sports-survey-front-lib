@@ -177,13 +177,14 @@ export function SpecializeQuestions(cc: ComponentCollection, serializer: typeof 
 				en: 'Terms of Service',
 				ja: '利用規約',
 			},
-			questionJSON: {
+			elementsJSON: [{
 				"type": "boolean",
 				"name": "agree-to-tos",
 				"label": {
 					en: 'I accept terms of service',
 					ja: '利用規約に同意する',
 				},
+				"defaultValue": "false",
 				"titleLocation": "hidden",
 				"isRequired": true,
 				"requiredErrorText": {
@@ -192,7 +193,15 @@ export function SpecializeQuestions(cc: ComponentCollection, serializer: typeof 
 				},
 				"hideNumber": true,
 				"renderAs": "checkbox",
-			},
+				"validators": [{
+					"type": "expression",
+					"expression": "{composite.agree-to-tos} == true",
+					"text": {
+						en: 'You must agree to the terms of service',
+						ja: '利用規約に同意する必要があります',
+					},
+				}],
+			}],
 			onAfterRender(question: Question, htmlElement: any) {
 				if (htmlElement.getElementsByClassName('tos-container').length > 0) {
 					return;
