@@ -187,6 +187,10 @@ function SpecializeQuestions(cc, serializer) {
                 },
                 "titleLocation": "hidden",
                 "isRequired": true,
+                "requiredErrorText": {
+                    en: 'You must agree to the terms of service',
+                    ja: '利用規約に同意する必要があります',
+                },
                 "hideNumber": true,
                 "renderAs": "checkbox",
             },
