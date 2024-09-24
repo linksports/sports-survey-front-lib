@@ -89,6 +89,7 @@
         "--sjs-article-font-default-lineHeight": "28px",
         "--sjs-article-font-default-paragraphIndent": "0px",
         "--sjs-article-font-default-textCase": "none",
+        "--sjs-font-surveytitle-color": "#000",
         "--sjs-font-family": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif;"
     }
 }
